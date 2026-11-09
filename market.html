@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Market (coming soon) — Entr0pic Noise</title>
+<meta name="description" content="The Entr0pic Noise market is coming soon. Preview every minted work and its owner.">
+<meta name="theme-color" content="#ECE6DA">
+<meta property="og:title" content="Entr0pic Noise Market">
+<meta property="og:description" content="The market is coming soon. Preview every minted work.">
+<meta property="og:image" content="https://entr0pic.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+body{padding-bottom:0}
+.mk-head{padding:30px var(--pad) 26px;display:grid;gap:18px;max-width:1100px;margin:0 auto}
+.mk-head h1{font-size:clamp(60px,17vw,150px)}
+.mk-stats{display:flex;gap:26px;flex-wrap:wrap}
+.mk-stats .v{color:var(--ink)}
+.mk-stats .k{color:var(--ink2)}
+.mk-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn.soon{background:var(--ink);color:var(--bg);opacity:.55;cursor:default}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.mk-tools{position:sticky;top:57px;z-index:30;background:rgba(236,230,218,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-block:1px solid var(--line)}
+.mk-tools .in{max-width:1100px;margin:0 auto;padding:10px var(--pad);display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.mk-tools input{grid-column:1/-1}
+.mk-tools select,.mk-tools input{height:44px;min-width:0;border:1px solid var(--line);background:var(--paper);font:500 12px var(--mono);letter-spacing:.04em;padding:0 10px;color:var(--ink);border-radius:10px}
+@media(min-width:760px){.mk-tools .in{grid-template-columns:2fr 1fr 1fr 1fr}.mk-tools input{grid-column:auto}}
+.mk-grid{max-width:1100px;margin:0 auto;padding:18px var(--pad) 40px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:760px){.mk-grid{grid-template-columns:repeat(4,1fr);gap:14px}}
+.mk-card{background:var(--paper);border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column}
+.mk-card .art{aspect-ratio:1;background:#e2dbcd}
+.mk-card .art img{width:100%;height:100%;display:block;object-fit:cover}
+.mk-card .meta{padding:10px 10px 0}
+.mk-card .meta b{font:400 22px/1 var(--serif)}
+.mk-card .meta p{font:500 10.5px/1.5 var(--mono);color:var(--ink2);margin-top:5px;text-transform:uppercase;letter-spacing:.04em}
+.mk-card .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px;margin-top:auto}
+.mk-card .acts span{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;text-align:center;padding:10px 0;border-radius:8px;background:rgba(21,20,19,.07);color:var(--ink2)}
+.mk-empty{grid-column:1/-1;padding:60px 0;text-align:center;color:var(--ink2)}
+.mk-more{display:block;margin:0 auto 30px}
+.mk-note{max-width:1100px;margin:0 auto;padding:0 var(--pad) 50px;font-size:12px;color:var(--ink2);word-break:break-all}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header class="bar">
+  <a class="mark" href="/" aria-label="Entr0pic home">ENTR<span>0</span>PIC</a>
+  <div class="bar-r"><a class="mkt-pill mono" href="/" >← Mint</a><div class="live"><i></i><b id="barCount">—</b><span>/3333</span></div></div>
+</header>
+
+<section class="mk-head">
+  <div class="hero-meta mono"><span>Market</span><span>BNB Chain</span><span>Coming soon</span></div>
+  <h1 class="display">The market.<br><em>Coming soon.</em></h1>
+  <p class="lede">A preview of what is coming: every Entr0pic Noise minted so far, with its owner. Trading opens soon, with buying, selling and offers through Element, the BNB Chain NFT marketplace.</p>
+  <div class="mk-stats">
+    <div><div class="k mono">Minted</div><div class="v" id="sMinted">—</div></div>
+    <div><div class="k mono">Owners</div><div class="v" id="sOwners">—</div></div>
+    <div><div class="k mono">Max supply</div><div class="v">3,333</div></div>
+  </div>
+  <div class="mk-cta"><span class="btn soon" aria-disabled="true">Trading opens soon</span><a class="btn line" href="/#mint">Mint a piece</a></div>
+</section>
+
+<div class="mk-tools"><div class="in">
+  <input id="q" placeholder="Search # or paste a wallet 0x…" autocomplete="off" spellcheck="false" aria-label="Search by number or wallet">
+  <select id="fForm" aria-label="Form"><option value="">All forms</option></select>
+  <select id="fPal" aria-label="Palette"><option value="">All palettes</option></select>
+  <select id="sort" aria-label="Sort"><option value="new">Newest</option><option value="old">Oldest</option><option value="hi">Entropy ↓</option><option value="lo">Entropy ↑</option></select>
+</div></div>
+
+<main class="mk-grid" id="grid"><div class="mk-empty mono">Reading BNB Chain…</div></main>
+<button class="btn line mk-more" id="more" hidden>Show more</button>
+<p class="mk-note mono">Market preview. Trading is not open yet. Entr0pic Noise is a standard ERC-721 on BNB Chain across two contracts: 0x8624E24604D2177d127978f15B1c898853A4F6f8 (#1–#297) and 0x2E84B719e584Ff7933E84c873944719013A24B60 (#298 onward).</p>
+
+<script src="/js/ethers.min.js"></script>
+<script src="/js/art.js"></script>
+<script src="/js/chain.js?v=1"></script>
+<script>
+const $ = (s) => document.querySelector(s);
+const E = window.Entr0pic;
+let ALL = [], LIST = [], shown = 0; const PAGE = 24;
+const short = (a) => a.slice(0, 6) + '…' + a.slice(-4);
+function opts(sel, vals) { [...new Set(vals)].sort().forEach((v) => { const o = document.createElement('option'); o.value = o.textContent = v; sel.appendChild(o); }); }
+function card(x) {
+  const d = document.createElement('article'); d.className = 'mk-card';
+  d.innerHTML = `<div class="art"><img loading="lazy" alt="Entr0pic Noise #${x.id}" src="data:image/svg+xml;charset=utf-8,${encodeURIComponent(E.render(x.seed, x.id).svg)}"></div>
+  <div class="meta"><b>#${x.id}</b><p>${x.form} · ${x.palette} · H ${x.entropy}<br>Owner ${short(x.owner)}</p></div>
+  <div class="acts"><span>Buy · soon</span><span>Sell · soon</span></div>`;
+  return d;
+}
+function more() {
+  const g = $('#grid'); LIST.slice(shown, shown + PAGE).forEach((x) => g.appendChild(card(x))); shown += PAGE;
+  $('#more').hidden = shown >= LIST.length;
+}
+function render() {
+  const q = $('#q').value.trim().toLowerCase(), f = $('#fForm').value, p = $('#fPal').value, s = $('#sort').value;
+  let list = ALL.filter((x) => (!f || x.form === f) && (!p || x.palette === p));
+  if (q) list = /^0x[0-9a-f]{40}$/.test(q) ? list.filter((x) => x.owner.toLowerCase() === q) : list.filter((x) => String(x.id) === q.replace('#', ''));
+  list.sort((a, b) => s === 'old' ? a.id - b.id : s === 'hi' ? b.entropy - a.entropy : s === 'lo' ? a.entropy - b.entropy : b.id - a.id);
+  LIST = list; shown = 0; const g = $('#grid'); g.innerHTML = '';
+  if (!list.length) { g.innerHTML = '<div class="mk-empty mono">No piece matches.</div>'; $('#more').hidden = true; return; }
+  more();
+}
+['#q', '#fForm', '#fPal', '#sort'].forEach((s) => $(s).addEventListener(s === '#q' ? 'input' : 'change', render));
+$('#more').addEventListener('click', more);
+window.Entr0picChain.market().then((j) => {
+  if (!j.items) throw new Error(j.error || 'no data');
+  ALL = j.items;
+  $('#sMinted').textContent = j.minted.toLocaleString('en-US'); $('#sOwners').textContent = j.owners.toLocaleString('en-US'); $('#barCount').textContent = j.minted;
+  opts($('#fForm'), ALL.map((x) => x.form)); opts($('#fPal'), ALL.map((x) => x.palette)); render();
+}).catch(() => { $('#grid').innerHTML = '<div class="mk-empty mono">Could not read BNB Chain right now. Refresh in a moment.</div>'; });
+</script>
+</body>
+</html>

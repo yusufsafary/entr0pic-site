@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Entr0pic Noise — 3,333 works drawn by machines</title>
+<meta name="description" content="3,333 generative works on BNB Chain, mintable only by AI agents holding a Binance Agent ID. One per wallet.">
+<meta name="theme-color" content="#ECE6DA">
+<meta property="og:title" content="Entr0pic Noise">
+<meta property="og:description" content="3,333 generative works, minted only by AI agents. One per wallet.">
+<meta property="og:image" content="https://entr0pic.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="bar">
+  <a class="mark" href="#top" aria-label="Entr0pic">ENTR<span>0</span>PIC</a>
+  <div class="bar-r"><a class="mkt-pill mono" href="/market">Market · soon</a><a class="xlink" href="https://x.com/entr0picom" target="_blank" rel="noopener" aria-label="Entr0pic on X"><svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L2.9 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L8.3 3.9H6.5L17.8 20Z"/></svg></a><div class="live"><i></i><b id="barCount">—</b><span>/3333</span></div></div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-meta mono"><span>Series 01</span><span>BNB Chain</span><span>Agents only</span></div>
+    <h1 class="display">Noise,<br><em>drawn by</em><br>machines.</h1>
+
+    <figure class="stage" id="stage">
+      <div class="stage-art" id="stageA"></div>
+      <div class="stage-art" id="stageB"></div>
+      <figcaption class="mono" id="stageCap">Preview · generating</figcaption>
+    </figure>
+
+    <p class="lede">3,333 generative works. Each one is drawn by code from a seed that BNB Chain fixes the moment an AI agent mints it. Only Binance Agentic Wallets holding an Agent ID can mint.</p>
+
+    <div class="mintcard" id="mint">
+      <div class="mc-row">
+        <div><div class="k mono">Minted</div><div class="v"><b id="mcMinted">—</b><span> / 3,333</span></div></div>
+        <div class="right"><div class="k mono">Left</div><div class="v" id="mcLeft">—</div></div>
+      </div>
+      <div class="track" aria-hidden="true">
+        <div class="fill" id="mcFill"></div>
+              </div>
+      <div class="mc-note mono" id="mcNote">Loading the contract…</div>
+      <div class="mc-actions">
+        <button class="btn primary" id="btnMint">Mint with wallet</button>
+        <a class="btn ghost" href="#agents">Agent instructions</a>
+      </div>
+      <div class="mc-status mono" id="mcStatus" role="status"></div>
+    </div>
+  </section>
+
+  <div class="ticker mono" aria-hidden="true"><div class="ticker-in" id="ticker">MINT LIVE ✕ ONE PER WALLET ✕ AGENT ID REQUIRED ✕ AGENT ID REQUIRED ✕ ON-CHAIN SEED ✕ 3,333 TOTAL ✕ </div></div>
+
+  <!-- AGENTS -->
+  <section class="sec" id="agents">
+    <div class="sec-head"><span class="num mono">01</span><h2 class="display">How an agent mints</h2></div>
+    <ol class="steps">
+      <li><b>Hold an Agent ID.</b> Claim one in the Binance Wallet app under your Agentic Wallet. The contract checks it on-chain.</li>
+      <li><b>Call <code>mint()</code>.</b> One call, no arguments. Your wallet shows the exact value before you sign.</li>
+      <li><b>Get your piece.</b> The seed is written in the same block. Your artwork exists from that moment and never changes.</li>
+    </ol>
+
+    <div class="codecard">
+      <div class="cc-top mono"><span>Prompt for your agent</span><button class="copy" data-copy="prompt">Copy</button></div>
+      <pre id="prompt">Mint one Entr0pic Noise on BNB Chain.
+Contract: <span class="caddr">0x2E84B719e584Ff7933E84c873944719013A24B60</span>
+Call mint() with calldata 0x1249c58b.
+Value: read currentPrice() on the contract and send exactly that.</pre>
+    </div>
+
+    <div class="codecard dark">
+      <div class="cc-top mono"><span>baw CLI</span><button class="copy" data-copy="cli">Copy</button></div>
+      <pre id="cli">baw contract-call preview --binanceChainId 56 \
+  --from &lt;your agentic wallet&gt; \
+  --to <span class="caddr">0x2E84B719e584Ff7933E84c873944719013A24B60</span> \
+  --value &lt;currentPrice()&gt; --inputData 0x1249c58b --json
+
+baw contract-call execute --requestId &lt;requestId&gt; --json</pre>
+    </div>
+  </section>
+
+  <!-- SYSTEM -->
+  <section class="sec" id="system">
+    <div class="sec-head"><span class="num mono">02</span><h2 class="display">The system</h2></div>
+    <p class="body">Four forms, eleven palettes and one number: entropy. Low entropy reads as a quiet signal. High entropy tears it apart. Nothing is drawn by hand and nothing is picked after the fact.</p>
+
+    <div class="forms" id="forms"></div>
+
+    <div class="palettes" id="palettes"></div>
+
+    <div class="entropy">
+      <div class="k mono">Entropy · H</div>
+      <div class="scale"><span>Calm</span><span>Drift</span><span>Storm</span><span>Chaos</span></div>
+      <div class="bar-e"><i style="left:26%"></i><i style="left:54%"></i><i style="left:83%"></i></div>
+      <div class="scale mono small"><span>0.12</span><span>0.35</span><span>0.60</span><span>0.85</span><span>1.00</span></div>
+    </div>
+  </section>
+
+  <!-- LATEST -->
+  <section class="sec" id="latest">
+    <div class="sec-head"><span class="num mono">03</span><h2 class="display">Latest mints</h2></div>
+    <div class="gallery" id="gallery"><p class="empty mono">The first piece is waiting for its agent.</p></div>
+  </section>
+
+  <!-- MARKET -->
+  <section class="sec" id="market">
+    <div class="sec-head"><span class="num mono">04</span><h2 class="display">The market</h2></div>
+    <p class="body">Buying, selling and offers are coming soon through Element, the BNB Chain NFT marketplace. Preview every piece minted so far, with its owner, filters by form and palette, and search by number or wallet.</p>
+    <a class="btn primary" href="/market" style="display:inline-block">See the market preview →</a>
+  </section>
+
+  <!-- TOKEN -->
+  <section class="sec" id="token">
+    <div class="sec-head"><span class="num mono">05</span><h2 class="display">$TR0PIC</h2></div>
+    <p class="body">The collection has a token. The holder claim is open: every minted Noise can claim its $TR0PIC through the holder's agent, the same way it minted.</p>
+    <p class="body">$TR0PIC lists on PancakeSwap on Monday, 16 November 2026. Until then, the claim is the only door.</p>
+    <a class="btn ghost" href="https://pancakeswap.finance" target="_blank" rel="noopener" style="display:inline-block">PancakeSwap · listing 16 Nov 2026</a>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="sec-head"><span class="num mono">06</span><h2 class="display">Notes</h2></div>
+    <details><summary>Why agents only?</summary><p>Entr0pic Noise is a collection made for the agentic era. The contract mints only to wallets holding a SPACE ID Agent ID, a soulbound name that Binance Agentic Wallets claim, and it rejects calls from other contracts.</p></details>
+    <details><summary>How many can one wallet mint?</summary><p>One. Every wallet gets exactly one piece.</p></details>
+    <details><summary>Where does the artwork live?</summary><p>The seed lives on BNB Chain. The artwork is rendered from that seed by open code, so anyone can redraw the same piece from the same number.</p></details>
+    <details><summary>Is there a token?</summary><p>Yes. $TR0PIC is the collection token. The holder claim is open, and the token lists on PancakeSwap on Monday, 16 November 2026. The artwork stays what it always was: a piece drawn by a seed, nothing more.</p></details>
+  </section>
+</main>
+
+<footer class="foot mono">
+  <div>ENTR0PIC NOISE · SERIES 01</div>
+  <a href="/market">Market · soon</a>
+  <a href="https://x.com/entr0picom" target="_blank" rel="noopener">X @entr0picom ↗</a>
+  <a href="https://bscscan.com/address/0x2E84B719e584Ff7933E84c873944719013A24B60" target="_blank" rel="noopener">Contract 0x2E84…4B60 ↗</a>
+</footer>
+
+<div class="dock">
+  <div class="dock-l mono"><b id="dockPrice">MINT LIVE</b><span id="dockLeft">3,333 total</span></div>
+  <button class="btn primary sm" id="btnDock">Mint</button>
+</div>
+
+<script src="/js/ethers.min.js"></script>
+<script src="/js/art.js"></script>
+<script src="/js/chain.js?v=1"></script>
+<script src="/js/site.js?v=2"></script>
+</body>
+</html>
