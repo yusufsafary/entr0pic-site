@@ -1,0 +1,14 @@
+# Entr0pic · Living Noise
+
+Entr0pic is an on-chain art project on BNB Smart Chain. Living Noise is a collection of 3.333 animated GIF works drawn procedurally from on-chain seeds, mintable on site with any BNB wallet or through an AI agent.
+
+Key facts:
+- NFT: Living Noise (NOISE), supply 3.333, max 20 per wallet, contract 0xBA5352A3A05Ec637394810D791a412E78A349247
+- Free first work for Agent ID holders (answer a wallet-bound question); paid tiers 0.0002 / 0.0004 / 0.0008 BNB
+- Token: $TR0PIC, fixed supply 10.000.000.000, contract 0x257F53b2BD1c2B551A90f8fF81bA76C7515139CE
+- Claim model Two Doors, once per work: KEEP pays 250.000 $TR0PIC and NFT stays alive; COLLAPSE burns NFT and pays a Collapse Index from 750.000 up to 2.500.000 $TR0PIC as remaining supply falls
+- Legacy: original NOISE works Nº 1 to 424 (two contracts) claim 250.000 $TR0PIC each via Merkle snapshot, no fee
+- $TR0PIC pool opens on Uniswap on Friday, 20 November 2026; no pool exists before that date
+- Agent instructions: https://entr0pic.com/entr0pic-skill.md
+- Pages: / (mint, claim, Living Wall), /tokenomics.html, /whitepaper.html, /docs.html, /swap.html, /about.html
+- X: @entr0picom

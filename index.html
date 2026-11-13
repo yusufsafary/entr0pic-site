@@ -1,152 +1,158 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Entr0pic Noise — 3,333 works drawn by machines</title>
-<meta name="description" content="3,333 generative works on BNB Chain, mintable only by AI agents holding a Binance Agent ID. One per wallet.">
-<meta name="theme-color" content="#ECE6DA">
-<meta property="og:title" content="Entr0pic Noise">
-<meta property="og:description" content="3,333 generative works, minted only by AI agents. One per wallet.">
-<meta property="og:image" content="https://entr0pic.com/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/site.css?v=2">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entr0pic · Living Noise</title>
+<meta name="description" content="3.333 living animated works on BNB Chain. Mint, keep or collapse for $TR0PIC.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/style.css?v=1">
+<meta property="og:title" content="Entr0pic · Living Noise">
+<meta property="og:description" content="3.333 living animated works on BNB Chain. Mint, keep or collapse for $TR0PIC.">
+<meta property="og:image" content="https://entr0pic.com/art/living/1.png">
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
-
-<header class="bar">
-  <a class="mark" href="#top" aria-label="Entr0pic">ENTR<span>0</span>PIC</a>
-  <div class="bar-r"><a class="mkt-pill mono" href="/market">Market</a><a class="xlink" href="https://x.com/entr0picom" target="_blank" rel="noopener" aria-label="Entr0pic on X"><svg viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L2.9 2h6.4l4.4 5.9L18.9 2Zm-1.1 18h1.7L8.3 3.9H6.5L17.8 20Z"/></svg></a><div class="live"><i></i><b id="barCount">—</b><span>/3333</span></div></div>
+<div class="announce">$TR0PIC pool opens on <b>Uniswap</b> · Friday <b>20 November 2026</b> · Liquidity reserve 1.000.000.000 $TR0PIC</div>
+<header class="nav">
+  <a class="brand" href="index.html"><svg viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="12" fill="#121216" stroke="#26262c"/><rect x="14" y="22" width="6" height="20" fill="#ece6da"/><rect x="24" y="12" width="6" height="40" fill="#e5481f"/><rect x="34" y="18" width="6" height="28" fill="#e8b84b"/><rect x="44" y="26" width="6" height="12" fill="#ece6da"/></svg><span class="word">ENTR<em>0</em>PIC</span></a>
+  <nav class="links">
+    <a href="index.html">Mint</a><a href="index.html#claim">Claim</a><a href="index.html#wall">Living Wall</a><a href="tokenomics.html">Tokenomics</a><a href="whitepaper.html">Whitepaper</a><a href="docs.html">Docs</a><a href="swap.html">Swap</a><a href="about.html">About</a>
+    <button class="btn small connectBtn" type="button">Connect wallet</button>
+  </nav>
 </header>
 
-<main id="top">
-  <!-- HERO -->
+<main class="wrap">
   <section class="hero">
-    <div class="hero-meta mono"><span>Series 01</span><span>BNB Chain</span><span>Agents only</span></div>
-    <h1 class="display">Noise,<br><em>drawn by</em><br>machines.</h1>
-
-    <figure class="stage" id="stage">
-      <div class="stage-art" id="stageA"></div>
-      <div class="stage-art" id="stageB"></div>
-      <figcaption class="mono" id="stageCap">Preview · generating</figcaption>
-    </figure>
-
-    <p class="lede">3,333 generative works. Each one is drawn by code from a seed that BNB Chain fixes the moment an AI agent mints it. Only Binance Agentic Wallets holding an Agent ID can mint.</p>
-
-    <div class="mintcard" id="mint">
-      <div class="mc-row">
-        <div><div class="k mono">Minted</div><div class="v"><b id="mcMinted">—</b><span> / 3,333</span></div></div>
-        <div class="right"><div class="k mono">Left</div><div class="v" id="mcLeft">—</div></div>
+    <div class="kicker">Entr0pic · Living Noise · BNB Chain</div>
+    <h1>Noise,<br><em>alive.</em></h1>
+    <p class="lede" style="margin-top:16px">3.333 animated works, drawn from their own seeds, looping every 2.4 seconds and changing phase each day at 00:00 UTC. Mint one here with any BNB wallet, or send your agent. Hold it and claim $TR0PIC, or burn it and take a bigger share as supply shrinks. One work, one door, once.</p>
+    <div class="stage-frame">
+      <div class="stage-grid">
+        <div class="stage-main"><img id="stageMain" src="art/living/1.gif" alt="Living Noise on stage"></div>
+        <div class="stage-side"><img id="stageSideA" src="art/living/2.gif" alt="Living Noise"><img id="stageSideB" src="art/living/3.gif" alt="Living Noise"></div>
       </div>
-      <div class="track" aria-hidden="true">
-        <div class="fill" id="mcFill"></div>
-              </div>
-      <div class="mc-note mono" id="mcNote">Loading the contract…</div>
-      <div class="mc-actions">
-        <button class="btn primary" id="btnMint">Mint with wallet</button>
-        <a class="btn ghost" href="#agents">Agent instructions</a>
+      <div class="stage-cap" id="stageCap">On stage today: living works, phased daily</div>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="num" id="stMinted">···</div><div class="lab">Works minted / 3.333</div></div>
+      <div class="fact"><div class="num" id="stRemaining">···</div><div class="lab">Works remaining</div></div>
+      <div class="fact hot"><div class="num" id="stIndex">···</div><div class="lab">Collapse Index, $TR0PIC</div></div>
+      <div class="fact"><div class="num" id="stBurned">···</div><div class="lab">Works collapsed</div></div>
+    </div>
+    <p class="mono-small" id="boardNote" style="margin-top:12px">Reading chain…</p>
+  </section>
+
+  <section id="mint">
+    <div class="kicker">Mint</div>
+    <h2>Hang a work <em>on your wall</em></h2>
+    <p class="lede">First work is free for Agent ID holders: answer one small question drawn from your wallet. Any BNB wallet can mint paid works right away. Paid mint BNB moves to a project wallet inside a same transaction. Max 20 works per wallet.</p>
+    <div class="tiers">
+      <div class="tier"><div class="tp">Free</div><div class="tl">Work 1 · Agent ID holders</div></div>
+      <div class="tier"><div class="tp">0.0002 BNB</div><div class="tl">Works 1 to 5 · paid path</div></div>
+      <div class="tier"><div class="tp">0.0004 BNB</div><div class="tl">Works 6 to 10</div></div>
+      <div class="tier"><div class="tp">0.0008 BNB</div><div class="tl">Works 11 to 20</div></div>
+    </div>
+    <div class="console">
+      <h3>Mint console</h3>
+      <p class="sub" id="mintState">Connect a wallet to see your price, your question, and your count. Works held by this wallet: <b id="myWorks">·</b></p>
+      <div class="row" id="freeRow" style="display:none">
+        <input type="number" id="freeAnswer" placeholder="Your answer" inputmode="numeric">
+        <button class="btn" id="btnFree" type="button">Mint free work</button>
       </div>
-      <div class="mc-status mono" id="mcStatus" role="status"></div>
+      <div class="row" id="paidRow" style="display:none">
+        <button class="btn" id="btnPaid" type="button">Mint paid work</button>
+      </div>
+      <div class="row">
+        <button class="btn ghost connectBtn" type="button">Connect wallet</button>
+      </div>
+      <p class="status" id="mintStatus"></p>
+      <div class="promptbox">AGENT PATH · Send your agent this instruction:
+"Read https://entr0pic.com/entr0pic-skill.md and mint a Living Noise work for my wallet on BNB Chain. Free first work needs my Agent ID and an answer from questionFor. Paid works follow priceFor."</div>
     </div>
   </section>
 
-  <div class="ticker mono" aria-hidden="true"><div class="ticker-in" id="ticker">MINT LIVE ✕ ONE PER WALLET ✕ AGENT ID REQUIRED ✕ AGENT ID REQUIRED ✕ ON-CHAIN SEED ✕ 3,333 TOTAL ✕ </div></div>
-
-  <!-- AGENTS -->
-  <section class="sec" id="agents">
-    <div class="sec-head"><span class="num mono">01</span><h2 class="display">How an agent mints</h2></div>
-    <ol class="steps">
-      <li><b>Hold an Agent ID.</b> Claim one in the Binance Wallet app under your Agentic Wallet. The contract checks it on-chain.</li>
-      <li><b>Call <code>mint()</code>.</b> One call, no arguments. Your wallet shows the exact value before you sign.</li>
-      <li><b>Get your piece.</b> The seed is written in the same block. Your artwork exists from that moment and never changes.</li>
-    </ol>
-
-    <div class="codecard">
-      <div class="cc-top mono"><span>Prompt for your agent</span><button class="copy" data-copy="prompt">Copy</button></div>
-      <pre id="prompt">Mint one Entr0pic Noise on BNB Chain.
-Contract: <span class="caddr">0x2E84B719e584Ff7933E84c873944719013A24B60</span>
-Call mint() with calldata 0x1249c58b.
-Value: read currentPrice() on the contract and send exactly that.</pre>
+  <section id="claim">
+    <div class="kicker">Claim · Two Doors</div>
+    <h2>Every work chooses <em>once</em></h2>
+    <p class="lede">KEEP pays 250.000 $TR0PIC and your work stays alive, still breathing on a wall. COLLAPSE burns your work forever and pays a Collapse Index: a share that climbs as remaining supply falls, up to 2.500.000 $TR0PIC for one of last 500 works. A door, once taken, never reopens.</p>
+    <div class="facts">
+      <div class="fact"><div class="num" id="stPool">···</div><div class="lab">Two Doors pool, $TR0PIC</div></div>
+      <div class="fact"><div class="num" id="stKept">···</div><div class="lab">Works kept</div></div>
+      <div class="fact"><div class="num" id="stCollapsed">···</div><div class="lab">Works collapsed</div></div>
+      <div class="fact"><div class="num" id="stLegacyClaimed">···</div><div class="lab">Legacy claims paid</div></div>
+    </div>
+    <div class="console goldframe">
+      <h3>Open a door</h3>
+      <p class="sub">Enter your work number. Fees are charged in BNB and forwarded instantly; payouts land in a same transaction.</p>
+      <div class="row">
+        <input type="number" id="workId" placeholder="Work Nº, 1 to 3333" min="1" max="3333">
+        <button class="btn ghost" id="btnCheckWork" type="button">Check work</button>
+      </div>
+      <p class="status" id="workStatus"></p>
+      <div class="doors" id="doorsBox" style="display:none">
+        <div class="door">
+          <div class="dlab">Door one · Keep</div>
+          <div class="amount" id="keepAmt">250.000</div>
+          <div class="dlab">$TR0PIC paid to you</div>
+          <p id="keepFee">Fee in BNB · NFT stays alive</p>
+          <button class="btn" id="btnKeep" type="button">Keep and claim</button>
+        </div>
+        <div class="door gold">
+          <div class="dlab">Door two · Collapse</div>
+          <div class="amount" id="colAmt">···</div>
+          <div class="dlab">$TR0PIC paid to you</div>
+          <p id="colFee">Fee in BNB · NFT burns forever</p>
+          <button class="btn gold" id="btnCollapse" type="button">Collapse and burn</button>
+        </div>
+      </div>
     </div>
 
-    <div class="codecard dark">
-      <div class="cc-top mono"><span>baw CLI</span><button class="copy" data-copy="cli">Copy</button></div>
-      <pre id="cli">baw contract-call preview --binanceChainId 56 \
-  --from &lt;your agentic wallet&gt; \
-  --to <span class="caddr">0x2E84B719e584Ff7933E84c873944719013A24B60</span> \
-  --value &lt;currentPrice()&gt; --inputData 0x1249c58b --json
-
-baw contract-call execute --requestId &lt;requestId&gt; --json</pre>
+    <div class="console">
+      <h3>Legacy works, 2025 line</h3>
+      <p class="sub">Hold an original NOISE work, Nº 1 to 424 across two first contracts? A snapshot froze your right: claim 250.000 $TR0PIC per work, no fee, and your old work is not burned. Pool holds <b id="stLegacyPool">···</b> $TR0PIC.</p>
+      <div class="row">
+        <input type="number" id="legacyId" placeholder="Old work Nº, 1 to 424" min="1" max="424">
+        <button class="btn ghost" id="btnCheckLegacy" type="button">Check legacy</button>
+        <button class="btn" id="btnLegacyClaim" type="button" style="display:none">Claim 250.000</button>
+      </div>
+      <p class="status" id="legacyStatus"></p>
     </div>
   </section>
 
-  <!-- SYSTEM -->
-  <section class="sec" id="system">
-    <div class="sec-head"><span class="num mono">02</span><h2 class="display">The system</h2></div>
-    <p class="body">Four forms, eleven palettes and one number: entropy. Low entropy reads as a quiet signal. High entropy tears it apart. Nothing is drawn by hand and nothing is picked after the fact.</p>
-
-    <div class="forms" id="forms"></div>
-
-    <div class="palettes" id="palettes"></div>
-
-    <div class="entropy">
-      <div class="k mono">Entropy · H</div>
-      <div class="scale"><span>Calm</span><span>Drift</span><span>Storm</span><span>Chaos</span></div>
-      <div class="bar-e"><i style="left:26%"></i><i style="left:54%"></i><i style="left:83%"></i></div>
-      <div class="scale mono small"><span>0.12</span><span>0.35</span><span>0.60</span><span>0.85</span><span>1.00</span></div>
-    </div>
-  </section>
-
-  <!-- LATEST -->
-  <section class="sec" id="latest">
-    <div class="sec-head"><span class="num mono">03</span><h2 class="display">Latest mints</h2></div>
-    <div class="gallery" id="gallery"><p class="empty mono">The first piece is waiting for its agent.</p></div>
-  </section>
-
-  <!-- MARKET -->
-  <section class="sec" id="market">
-    <div class="sec-head"><span class="num mono">04</span><h2 class="display">The market</h2></div>
-    <p class="body">Buying, selling and offers are coming soon through Element, the BNB Chain NFT marketplace. Preview every piece minted so far, with its owner, filters by form and palette, and search by number or wallet.</p>
-    <a class="btn primary" href="/market" style="display:inline-block">See the market preview →</a>
-  </section>
-
-  <!-- TOKEN -->
-  <section class="sec" id="token">
-    <div class="sec-head"><span class="num mono">05</span><h2 class="display">$TR0PIC</h2></div>
-    <p class="body">Noise lives on BNB Chain. Its token lives on Elysium. $TR0PIC launched on Montra: a supply of 1,000,000,000, all of it in one locked Uniswap v4 pool, trading from its first block.</p>
-    <p class="body">Contract on Elysium: 0xe7Af8458B3918D3c81DbbBbCa2fCe2cE98189955. What the launch means for Noise holders will be announced here and on X first, before anywhere else.</p>
-    <a class="btn ghost" href="https://montramarkets.xyz/token/0xe7af8458b3918d3c81dbbbca2fce2ce98189955" target="_blank" rel="noopener" style="display:inline-block;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)">Trade $TR0PIC on Montra</a>
-  </section>
-
-  <!-- FAQ -->
-  <section class="sec" id="faq">
-    <div class="sec-head"><span class="num mono">06</span><h2 class="display">Notes</h2></div>
-    <details><summary>Why agents only?</summary><p>Entr0pic Noise is a collection made for the agentic era. The contract mints only to wallets holding a SPACE ID Agent ID, a soulbound name that Binance Agentic Wallets claim, and it rejects calls from other contracts.</p></details>
-    <details><summary>How many can one wallet mint?</summary><p>One. Every wallet gets exactly one piece.</p></details>
-    <details><summary>Where does the artwork live?</summary><p>The seed lives on BNB Chain. The artwork is rendered from that seed by open code, so anyone can redraw the same piece from the same number.</p></details>
-    <details><summary>Is there a token?</summary><p>Yes. $TR0PIC is the collection token. It launched on Elysium through Montra and trades there now. The artwork stays what it always was: a piece drawn by a seed, nothing more.</p></details>
+  <section id="wall">
+    <div class="kicker">Living Wall</div>
+    <h2>A wall that <em>remembers ash</em></h2>
+    <p class="lede">Newest works hang here, breathing. A collapsed work stays on a wall as a grey ghost with its number, a permanent record of a door taken. When 500 or fewer works remain, every survivor carries Relic status, marked by a gold frame.</p>
+    <div class="wall" id="wall"></div>
+    <div class="wall-legend"><span><span class="dot"></span>Kept, claimed through door one</span><span>ASH: collapsed and burned</span><span>Gold frame: Relic, among last 500</span></div>
   </section>
 </main>
 
-<footer class="foot mono">
-  <div>ENTR0PIC NOISE · SERIES 01</div>
-  <a href="/market">Market</a>
-  <a href="https://x.com/entr0picom" target="_blank" rel="noopener">X @entr0picom ↗</a>
-  <a href="https://bscscan.com/address/0x2E84B719e584Ff7933E84c873944719013A24B60" target="_blank" rel="noopener">Contract 0x2E84…4B60 ↗</a>
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="12" fill="#121216" stroke="#26262c"/><rect x="14" y="22" width="6" height="20" fill="#ece6da"/><rect x="24" y="12" width="6" height="40" fill="#e5481f"/><rect x="34" y="18" width="6" height="28" fill="#e8b84b"/><rect x="44" y="26" width="6" height="12" fill="#ece6da"/></svg><span class="word">ENTR<em>0</em>PIC</span></a>
+      <p style="margin-top:14px">Living Noise: 3.333 animated works on BNB Chain. Each one breathes. Each one chooses a door exactly once.</p>
+    </div>
+    <div><h4>Project</h4>
+      <a href="index.html">Mint</a><a href="index.html#claim">Claim</a><a href="index.html#wall">Living Wall</a>
+      <a href="tokenomics.html">Tokenomics</a><a href="whitepaper.html">Whitepaper</a><a href="docs.html">Docs</a><a href="swap.html">Swap</a>
+    </div>
+    <div><h4>Legal</h4>
+      <a href="about.html">About</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a>
+    </div>
+    <div><h4>Contracts</h4>
+      <a href="https://bscscan.com/address/0x257F53b2BD1c2B551A90f8fF81bA76C7515139CE" target="_blank" rel="noopener">$TR0PIC token</a>
+      <a href="https://bscscan.com/address/0xBA5352A3A05Ec637394810D791a412E78A349247" target="_blank" rel="noopener">Living Noise NFT</a>
+      <a href="https://bscscan.com/address/0x389e8e5062960DF72FBB5c3519E0F2dc576f17bd" target="_blank" rel="noopener">Two Doors claim</a>
+      <a href="https://bscscan.com/address/0x2F8E4580e882e6dcb3D1DB5E21406B774ce07407" target="_blank" rel="noopener">Legacy claim</a>
+      <a href="https://bscscan.com/address/0x8624E24604D2177d127978f15B1c898853A4F6f8" target="_blank" rel="noopener">Old NOISE I</a>
+      <a href="https://bscscan.com/address/0x2E84B719e584Ff7933E84c873944719013A24B60" target="_blank" rel="noopener">Old NOISE II</a>
+    </div>
+  </div>
+  <div class="foot-base"><span>© 2026 Entr0pic · entr0pic.com</span><span>BNB Smart Chain · Chain ID 56</span><span>X: @entr0picom</span></div>
 </footer>
-
-<div class="dock">
-  <div class="dock-l mono"><b id="dockPrice">MINT LIVE</b><span id="dockLeft">3,333 total</span></div>
-  <button class="btn primary sm" id="btnDock">Mint</button>
-</div>
-
-<script src="/js/ethers.min.js"></script>
-<script src="/js/art.js"></script>
-<script src="/js/chain.js?v=1"></script>
-<script src="/js/site.js?v=2"></script>
+<script src="js/ethers.min.js"></script>
+<script src="js/app.js?v=1"></script>
 </body>
 </html>
