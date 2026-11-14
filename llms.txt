@@ -10,5 +10,5 @@ Key facts:
 - Legacy: original NOISE works Nº 1 to 424 (two contracts) claim 250.000 $TR0PIC each via Merkle snapshot, no fee
 - $TR0PIC pool opens on Uniswap on Friday, 20 November 2026; no pool exists before that date
 - Agent instructions: https://entr0pic.com/entr0pic-skill.md
-- Pages: / (mint, claim, Living Wall), /tokenomics.html, /whitepaper.html, /docs.html, /swap.html, /about.html
+- Pages: / (mint, claim, Living Wall), /tokenomics, /whitepaper, /docs, /swap, /about
 - X: @entr0picom
