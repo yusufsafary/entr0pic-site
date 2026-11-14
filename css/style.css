@@ -51,7 +51,11 @@ img { max-width: 100%; display: block; }
 header.nav {
   display: flex; align-items: center; gap: 18px;
   padding: 16px 20px; max-width: 1180px; margin: 0 auto; flex-wrap: wrap;
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(10, 10, 12, .94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
 }
+section[id] { scroll-margin-top: 92px; }
 .brand { display: flex; align-items: center; gap: 11px; color: var(--porcelain); }
 .brand svg { width: 30px; height: 30px; }
 .brand .word { font-family: var(--serif); font-size: 25px; letter-spacing: .04em; }
@@ -202,6 +206,12 @@ footer { border-top: 1px solid var(--line); margin-top: 70px; background: #08080
     scrollbar-width: none; -webkit-overflow-scrolling: touch;
   }
   header.nav nav.links::-webkit-scrollbar { display: none; }
-  .announce { font-size: 10.5px; letter-spacing: .1em; }
+  header.nav nav.links {
+    -webkit-mask-image: linear-gradient(90deg, #000 86%, transparent);
+    mask-image: linear-gradient(90deg, #000 86%, transparent);
+  }
+  section[id] { scroll-margin-top: 118px; }
+  .announce { font-size: 10px; letter-spacing: .06em; padding: 8px 10px; }
+  .kicker { letter-spacing: .18em; }
   input[type="number"], input[type="text"] { width: 100%; }
 }
