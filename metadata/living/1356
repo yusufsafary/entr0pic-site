@@ -1,0 +1,28 @@
+{
+ "name": "Living Noise #1356",
+ "description": "A living work of Entr0pic, drawn from its own seed and breathing in a 2.4 second loop. Hold it and claim $TR0PIC through the Keep door, or burn it forever through the Collapse door and take the Collapse Index.",
+ "image": "https://entr0pic.com/art/living/1356.gif",
+ "animation_url": "https://entr0pic.com/art/living/1356.gif",
+ "attributes": [
+  {
+   "trait_type": "Palette",
+   "value": "Porcelain"
+  },
+  {
+   "trait_type": "Filaments",
+   "value": 13
+  },
+  {
+   "trait_type": "Tempo",
+   "value": "Restless"
+  },
+  {
+   "trait_type": "Core",
+   "value": "Bright"
+  },
+  {
+   "trait_type": "Medium",
+   "value": "Animated GIF"
+  }
+ ]
+}
