@@ -137,7 +137,7 @@
     var html = "";
     for (var id = start; id <= state.minted; id++) {
       html += '<div class="tile" id="tile' + id + '"><img loading="lazy" src="art/living/' + id +
-        '.gif" alt="Living Noise #' + id + '"><span class="tid">Nº ' + id + "</span></div>";
+        '.png" alt="Living Noise #' + id + '"><span class="tid">Nº ' + id + "</span></div>";
     }
     wall.innerHTML = html;
     var p = readProvider();
