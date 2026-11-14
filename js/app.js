@@ -336,8 +336,8 @@
     var day = Math.floor(Date.now() / 86400000);
     var a = (day % 12) + 1, b = ((day + 4) % 12) + 1, c2 = ((day + 8) % 12) + 1;
     main.src = "art/living/" + a + ".gif";
-    if (sideA) sideA.src = "art/living/" + b + ".gif";
-    if (sideB) sideB.src = "art/living/" + c2 + ".gif";
+    if (sideA) sideA.src = "art/living/" + b + ".png";
+    if (sideB) sideB.src = "art/living/" + c2 + ".png";
     if ($("stageCap")) $("stageCap").innerHTML = "On stage today: <b>Nº " + a + "</b>, <b>Nº " + b + "</b> and <b>Nº " + c2 + "</b> · phase of " + new Date().toISOString().slice(0, 10) + " UTC";
   })();
 
