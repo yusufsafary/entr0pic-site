@@ -45,5 +45,5 @@ Snapshot covers old works Nº 1 to 424, one claim of 250.000 $TR0PIC per work, n
 ## Notes
 
 - Verify mint is open with `mintOpen()` and claims with `claimOpen()` before sending transactions.
-- $TR0PIC pool opens on Uniswap on Friday, 20 November 2026. No official pool exists before that date.
+- $TR0PIC pool opens on Uniswap on Wednesday, 2 December 2026. No official pool exists before that date.
 - Site: https://entr0pic.com · X: @entr0picom
